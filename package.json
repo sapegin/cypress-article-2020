@@ -1,0 +1,30 @@
+{
+  "name": "cypress-article-2019",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test:e2e": "cypress open",
+    "test:e2e:ci": "start-server-and-test 'react-scripts start' 3000 'cypress run --browser chrome --headless'"
+  },
+  "dependencies": {
+    "@reach/router": "^1.3.4",
+    "formik": "^2.1.5",
+    "node-fetch": "2.6.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "devDependencies": {
+    "@testing-library/cypress": "^6.0.0",
+    "cypress": "^4.10.0",
+    "msw": "^0.19.5",
+    "start-server-and-test": "^1.11.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
