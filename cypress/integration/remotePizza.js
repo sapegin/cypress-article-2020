@@ -26,7 +26,7 @@ it('shows an error message', () => {
     const { worker, rest } = window.msw;
     worker.use(
       rest.get('https://httpbin.org/anything', (req, res, ctx) => {
-        return res(ctx.status(500));
+        return res.once(ctx.status(500));
       })
     );
   });
