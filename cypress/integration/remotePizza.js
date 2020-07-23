@@ -1,7 +1,7 @@
 const ingredients = ['bacon', 'tomato', 'mozzarella', 'pineapples'];
 
 it('load ingredients asynchronously', () => {
-  cy.visit('http://localhost:3000/remote-pizza');
+  cy.visit('/remote-pizza');
 
   cy.log('Ingredients list is not visible');
   cy.findByText(ingredients[0]).should('not.be.visible');
@@ -19,7 +19,7 @@ it('load ingredients asynchronously', () => {
 });
 
 it('shows an error message', () => {
-  cy.visit('http://localhost:3000/remote-pizza');
+  cy.visit('/remote-pizza');
 
   cy.window().then((window) => {
     // Reference global instances set in src/browser.js

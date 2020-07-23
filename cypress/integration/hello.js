@@ -1,10 +1,10 @@
 it('hello world', () => {
-  cy.visit('http://localhost:3000');
+  cy.visit('/');
   cy.findByText(/pizza/i).should('be.visible');
 });
 
 it('navigates to another page', () => {
-  cy.visit('http://localhost:3000');
+  cy.visit('/');
 
   cy.log('Opening the pizza page');
   cy.findByRole('link', { name: /remotepizza/i }).click();

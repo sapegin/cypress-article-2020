@@ -1,5 +1,5 @@
 it('should show success page after submission', () => {
-  cy.visit('http://localhost:3000/signup');
+  cy.visit('/signup');
 
   cy.log('Filling the form');
   cy.findByLabelText(/first name/i)
@@ -20,7 +20,7 @@ it('should show success page after submission', () => {
 });
 
 it('should fill passport details', () => {
-  cy.visit('http://localhost:3000/signup');
+  cy.visit('/signup');
 
   cy.log('Filling passport number');
   cy.findByLabelText(/passport number/i)
@@ -49,7 +49,7 @@ it('should fill passport details', () => {
 });
 
 it('should have a link to terms and conditions', () => {
-  cy.visit('http://localhost:3000/signup');
+  cy.visit('/signup');
 
   cy.log('Check the link href');
   cy.findByRole('link', { name: /terms and conditions/i })
@@ -66,7 +66,7 @@ it('should have a link to terms and conditions', () => {
 ['iphone-x', 'macbook-15'].forEach((viewport) => {
   it(`should show success page after submission (${viewport})`, () => {
     cy.viewport(viewport);
-    cy.visit('http://localhost:3000/signup');
+    cy.visit('/signup');
 
     cy.log('Filling the form');
     cy.findByLabelText(/first name/i)
