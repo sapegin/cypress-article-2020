@@ -1,4 +1,4 @@
-describe('Async tests', () => {
+describe('Remote pizza', () => {
   const ingredients = ['bacon', 'tomato', 'mozzarella', 'pineapples'];
 
   it('load ingredients asynchronously', () => {

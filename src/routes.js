@@ -1,6 +1,7 @@
 import React from 'react';
 import { Router, Link } from '@reach/router';
 import { SignUp } from './components/SignUp';
+import { Profile } from './components/Profile';
 import { RemotePizza } from './components/RemotePizza';
 
 const HomePage = () => (
@@ -9,12 +10,17 @@ const HomePage = () => (
       <Link to="/signup">Sign up</Link>
     </li>
     <li>
+      <Link to="/profile">Profile</Link>
+    </li>
+    <li>
       <Link to="/remote-pizza">RemotePizza</Link>
     </li>
   </ul>
 );
 
 const SignUpPage = () => <SignUp />;
+
+const ProfilePage = () => <Profile />;
 
 const RemotePizzaPage = () => <RemotePizza />;
 
@@ -40,6 +46,7 @@ export function Routes() {
     <Router>
       <HomePage path="/" />
       <SignUpPage path="/signup" />
+      <ProfilePage path="/profile" />
       <RemotePizzaPage path="/remote-pizza" />
       <TermsAndConfitionsPage path="/toc" />
     </Router>

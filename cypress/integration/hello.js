@@ -1,4 +1,4 @@
-describe('Basic tests', () => {
+describe('Hello world', () => {
   it('hello world', () => {
     cy.visit('/');
     cy.findByText(/pizza/i).should('be.visible');

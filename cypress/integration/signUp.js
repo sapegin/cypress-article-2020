@@ -1,4 +1,4 @@
-describe('Form tests', () => {
+describe('Sign up', () => {
   it('should show success page after submission', () => {
     cy.visit('/signup');
 
